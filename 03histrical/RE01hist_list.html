@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>ref01</title>
+
+<style>
+.outerdiv{
+	width		: 100%;
+}
+
+.titlediv{
+	font-size	: 20px;
+	font-weight: bold;
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 0px;
+	padding		: 0px 5px;
+	border-top	: double;
+	border-bottom	: double;
+	line-height	: 150%;
+	color		: #000000;
+	background-color: #FCD5B4;
+}
+
+.maindiv{
+	font-size	: 16px;
+	font-weight: bold;
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 0px;
+	padding		: 0px 5px;
+	line-height	: 120%;
+	color		: #000000;
+	background-color: #DCE6F1;
+}
+
+.detaildiv {
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 0px;
+	padding		: 0px 5px;
+	font-size	: 14px;
+	color		: #000000;
+	background-color: #DCE6F1;
+}
+
+#selectiondiv{
+	height:		: 50px;
+	font-size	: 16px;
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 0px;
+	padding		: 0px 5px;
+}
+
+#sChartdiv {
+	height		: 600px;
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 0px;
+	padding		: 0px 5px;
+}
+
+#footerdiv {
+	margin-top	: 12px;
+	margin-left	: 10px;
+	margin-right: 10px;
+	padding		: 0px 5px;
+	font-size	:14px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="outerdiv">
+
+  <div class="titlediv">
+     <b>参考01 死因年次推移分類による時系列死亡数・死亡数率表示（1899年-2015年、e-stat公開データを編集）</b><br/>
+  </div>
+
+
+  <div class="detaildiv">
+   &nbsp・ 出典は、平成27年人口動態調査「上巻 死亡 第５．１２表 死因年次推移分類別にみた性別死亡数及び率（人口１０万対）」です。</br>
+   &nbsp&nbsp&nbsp&nbsp<a href="../docs/re01-1note.htm" target="_blank">参考01.1注記事項</a>もご参照ください。</br>
+   &nbsp・ 死因年次推移分類、表示種別（死亡数/死亡率）、性別（総数/男/女）を選択できます。
+   <a href="../docs/re01-2usage.htm" target="_blank">参考01.2利用方法</a>もご参照ください。
+  </div>
+
+  <div id="selectiondiv">
+  <HR>
+  死因年次推移分類：
+  <select id="hiCause" size=1 style="width: 200px">
+  </select>
+  
+  &nbsp&nbsp&nbsp&nbsp表示種別：
+  <select id="type" size=1 style="width: 100px">
+  </select>
+  
+  &nbsp&nbsp&nbsp性別:
+  <select id="gender" size=1 style="width: 100px">
+  </select>
+  <HR>
+  </div>
+
+  <div id="sChartdiv"></div>
+
+</div>
+
+    
+<script src="../jquery/jquery-1.12.4.min.js"></script>
+<script src="../jquery/jquery-ui.min.js"></script>
+<script src="../amcharts/amcharts.js"></script>
+<script src="../amcharts/serial.js"></script>
+<script src="../amcharts/themes/light.js"></script>
+<script src="./RE01hist_list.js" charset="Shift_JIS"></script>
+
+<script src="../amcharts/plugins/export/export.js"></script>
+<link rel="stylesheet" href="../amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+</body>
+</html>
+
